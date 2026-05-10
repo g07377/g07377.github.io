@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt and chat app icon</title>
+  <desc id="desc">Prompt cards and a chat bubble in purple and teal.</desc>
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="#f4efff"/>
+  <rect x="29" y="28" width="54" height="68" rx="8" fill="#ffffff" stroke="#d8c9ff" stroke-width="4"/>
+  <path d="M40 45h30M40 59h23M40 73h28" stroke="#6e56cf" stroke-width="5" stroke-linecap="round"/>
+  <path d="M64 78h24c9 0 16 6 16 14s-7 14-16 14H73l-13 10 4-13c-8-2-13-7-13-13 0-7 6-12 13-12Z" fill="#00796b"/>
+  <circle cx="76" cy="92" r="3.5" fill="#ffffff"/>
+  <circle cx="88" cy="92" r="3.5" fill="#ffffff"/>
+  <path d="M88 28h10M93 23v10" stroke="#f4b942" stroke-width="5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">What to eat app icon</title>
+  <desc id="desc">A cheerful food randomizer bowl and pointer.</desc>
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="#fff5f7"/>
+  <path d="M31 60h66c0 24-14 42-33 42S31 84 31 60Z" fill="#ffffff" stroke="#e85d75" stroke-width="4"/>
+  <path d="M35 61c9-15 48-15 58 0" fill="none" stroke="#f4b942" stroke-width="10" stroke-linecap="round"/>
+  <path d="M51 42c7-10 20-10 27 0" fill="none" stroke="#00796b" stroke-width="7" stroke-linecap="round"/>
+  <path d="M92 29 80 54l25-9Z" fill="#6e56cf"/>
+  <circle cx="54" cy="75" r="4" fill="#1f2933"/>
+  <circle cx="74" cy="75" r="4" fill="#1f2933"/>
+  <path d="M57 85c5 4 10 4 15 0" fill="none" stroke="#1f2933" stroke-width="4" stroke-linecap="round"/>
+  <path d="M31 36h16M39 28v16" stroke="#f4b942" stroke-width="5" stroke-linecap="round"/>
+</svg>

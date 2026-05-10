@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Stock simulator app icon</title>
+  <desc id="desc">A smiling upward chart over colorful bars.</desc>
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="#edfff8"/>
+  <rect x="32" y="58" width="14" height="36" rx="5" fill="#e85d75"/>
+  <rect x="57" y="43" width="14" height="51" rx="5" fill="#2386d1"/>
+  <rect x="82" y="31" width="14" height="63" rx="5" fill="#6e56cf"/>
+  <path d="M27 76 48 57l18 13 34-40" fill="none" stroke="#f4b942" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M91 29h14v14" fill="none" stroke="#f4b942" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="57" cy="65" r="4" fill="#1f2933"/>
+  <circle cx="70" cy="62" r="4" fill="#1f2933"/>
+  <path d="M58 75c5 5 12 5 17 0" fill="none" stroke="#1f2933" stroke-width="4" stroke-linecap="round"/>
+</svg>

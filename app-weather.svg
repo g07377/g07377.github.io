@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Taiwan weather app icon</title>
+  <desc id="desc">Sun, cloud, raindrops, and a Taiwan silhouette.</desc>
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="#dff3ff"/>
+  <circle cx="45" cy="43" r="21" fill="#f4b942"/>
+  <path d="M38 73c-11 0-20-8-20-18s8-18 19-18c6-14 27-15 35-1 12 1 22 10 22 22 0 13-10 22-24 22H38Z" fill="#ffffff"/>
+  <path d="M82 28c11 8 18 22 18 38 0 15-6 28-16 38 5-14 4-25-2-35-6-12-6-25 0-41Z" fill="#c9e6ff" stroke="#8bc7f0" stroke-width="3"/>
+  <path d="M39 87 32 99M58 87l-7 12" stroke="#2386d1" stroke-width="7" stroke-linecap="round"/>
+  <path d="M26 31h8M30 27v8" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>
