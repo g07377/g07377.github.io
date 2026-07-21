@@ -28,7 +28,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Noto Sans JP", "Noto Sans KR", sans-serif;
   line-height: 1.6;
 }
 
@@ -68,10 +68,18 @@ a {
   flex: 0 0 auto;
 }
 
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
   gap: 6px;
+  min-width: 0;
 }
 
 .site-nav a {
@@ -90,6 +98,43 @@ a {
 .site-nav a.is-active {
   color: var(--teal-dark);
   background: var(--surface-soft);
+}
+
+.language-control {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-label {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.language-control select {
+  min-height: 38px;
+  max-width: 168px;
+  padding: 0 30px 0 10px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.language-control select:hover,
+.language-control select:focus-visible {
+  border-color: var(--teal);
+}
+
+.language-control select:focus-visible {
+  outline: 3px solid rgba(0, 121, 107, 0.2);
+  outline-offset: 2px;
 }
 
 .hero {
@@ -435,7 +480,12 @@ h1 {
     padding: 14px 20px;
   }
 
+  .header-tools {
+    width: 100%;
+  }
+
   .site-nav {
+    flex: 1 1 auto;
     width: 100%;
     overflow-x: auto;
     padding-bottom: 2px;
@@ -507,6 +557,26 @@ h1 {
 @media (max-width: 560px) {
   .brand span {
     font-size: 15px;
+  }
+
+  .header-tools {
+    gap: 8px;
+  }
+
+  .language-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .language-control select {
+    max-width: 136px;
   }
 
   h1 {

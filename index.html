@@ -1,19 +1,20 @@
 <!doctype html>
-<html lang="zh-Hant-TW">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Natural Intelligence Studio | Android App 開發品牌</title>
-  <meta name="description" content="Natural Intelligence Studio 是台灣 Android App 獨立開發品牌，作品包含小店點餐系統、Chatgpt秘笈、台灣天氣預報、台灣郵遞區號3+3查詢，以及開發中的股市模擬器與今天吃什麼。">
+  <title data-i18n="meta.title">Natural Intelligence Studio | Independent Android App Studio</title>
+  <meta name="description" content="Natural Intelligence Studio is an independent Android app studio based in Taiwan, creating practical mobile tools and casual games." data-i18n="meta.description" data-i18n-attr="content">
   <meta name="theme-color" content="#00796b">
   <meta property="og:title" content="Natural Intelligence Studio">
-  <meta property="og:description" content="把日常問題做成好用的 Android App。">
+  <meta property="og:description" content="Turning everyday challenges into useful Android apps." data-i18n="meta.ogDescription" data-i18n-attr="content">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://g07377.github.io/">
   <meta property="og:image" content="developer-page-assets/brand-mark.svg">
+  <meta property="og:locale" content="en_US" data-og-locale>
   <link rel="icon" href="developer-page-assets/brand-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
+  <script id="structured-data" type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -22,127 +23,139 @@
     "sameAs": [
       "https://play.google.com/store/apps/developer?id=Natural+Intelligence+Studio"
     ],
-    "description": "台灣 Android App 獨立開發品牌，打造日常工具、效率應用與輕量遊戲。"
+    "description": "An independent Android app studio based in Taiwan, creating practical mobile tools and casual games."
   }
   </script>
 </head>
 <body>
   <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="Natural Intelligence Studio 首頁">
+    <a class="brand" href="#top" aria-label="Natural Intelligence Studio home" data-i18n="brand.home" data-i18n-attr="aria-label">
       <img src="developer-page-assets/brand-mark.svg" alt="" width="44" height="44">
       <span>Natural Intelligence Studio</span>
     </a>
-    <nav class="site-nav" aria-label="主要導覽">
-      <a href="#apps">作品</a>
-      <a href="#developing">開發中</a>
-      <a href="#studio">工作室</a>
-      <a href="#contact">連結</a>
-    </nav>
+    <div class="header-tools">
+      <nav class="site-nav" aria-label="Primary navigation" data-i18n="nav.label" data-i18n-attr="aria-label">
+        <a href="#apps" data-i18n="nav.apps">Apps</a>
+        <a href="#developing" data-i18n="nav.developing">In Development</a>
+        <a href="#studio" data-i18n="nav.studio">Studio</a>
+        <a href="#contact" data-i18n="nav.contact">Links</a>
+      </nav>
+      <div class="language-control">
+        <label class="language-label" for="language-select" data-i18n="language.label">Language</label>
+        <select id="language-select" data-language-select aria-label="Language" data-i18n="language.label" data-i18n-attr="aria-label">
+          <option value="auto" data-i18n="language.auto">Auto (device)</option>
+          <option value="en" lang="en">English</option>
+          <option value="zh-Hant" lang="zh-Hant">繁體中文</option>
+          <option value="ja" lang="ja">日本語</option>
+          <option value="ko" lang="ko">한국어</option>
+        </select>
+      </div>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">台灣 Android App 獨立開發品牌</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Independent Android apps, made in Taiwan</p>
         <h1 id="hero-title">Natural Intelligence Studio</h1>
-        <p class="hero-lead">把生活、工作與學習裡常見的小問題，做成清楚、穩定、好上手的 Android App。</p>
-        <div class="hero-actions" aria-label="主要連結">
-          <a class="button button-primary" href="https://play.google.com/store/apps/developer?id=Natural+Intelligence+Studio" target="_blank" rel="noopener">前往 Google Play</a>
-          <a class="button button-secondary" href="#apps">查看作品</a>
+        <p class="hero-lead" data-i18n="hero.lead">We turn everyday challenges at home, at work, and while learning into Android apps that are clear, reliable, and easy to use.</p>
+        <div class="hero-actions" aria-label="Primary links" data-i18n="hero.actionsLabel" data-i18n-attr="aria-label">
+          <a class="button button-primary" href="https://play.google.com/store/apps/developer?id=Natural+Intelligence+Studio" target="_blank" rel="noopener" data-i18n="hero.play">Visit Google Play</a>
+          <a class="button button-secondary" href="#apps" data-i18n="hero.viewApps">View Apps</a>
         </div>
       </div>
-      <div class="hero-visual" aria-label="Natural Intelligence Studio 產品圖示牆">
-        <div class="visual-tile tile-large"><img src="developer-page-assets/icon-pos.png" alt="小店點餐系統圖示"></div>
-        <div class="visual-tile"><img src="developer-page-assets/icon-gpt.png" alt="Chatgpt秘笈圖示"></div>
-        <div class="visual-tile"><img src="developer-page-assets/icon-weather.png" alt="台灣天氣預報圖示"></div>
-        <div class="visual-tile"><img src="developer-page-assets/icon-postal.png" alt="台灣郵遞區號3+3查詢圖示"></div>
-        <div class="visual-tile"><img src="developer-page-assets/icon-stock.png" alt="股市模擬器圖示"></div>
-        <div class="visual-tile"><img src="developer-page-assets/icon-food.png" alt="今天吃什麼圖示"></div>
+      <div class="hero-visual" aria-label="Natural Intelligence Studio app icon gallery" data-i18n="hero.visualLabel" data-i18n-attr="aria-label">
+        <div class="visual-tile tile-large"><img src="developer-page-assets/icon-pos.png" alt="Small Shop Ordering System icon" data-i18n="alt.pos" data-i18n-attr="alt"></div>
+        <div class="visual-tile"><img src="developer-page-assets/icon-gpt.png" alt="ChatGPT Prompt Guide icon" data-i18n="alt.gpt" data-i18n-attr="alt"></div>
+        <div class="visual-tile"><img src="developer-page-assets/icon-weather.png" alt="Taiwan Weather Forecast icon" data-i18n="alt.weather" data-i18n-attr="alt"></div>
+        <div class="visual-tile"><img src="developer-page-assets/icon-postal.png" alt="Taiwan Postal Code 3+3 Lookup icon" data-i18n="alt.postal" data-i18n-attr="alt"></div>
+        <div class="visual-tile"><img src="developer-page-assets/icon-stock.png" alt="Stock Market Simulator icon" data-i18n="alt.stock" data-i18n-attr="alt"></div>
+        <div class="visual-tile"><img src="developer-page-assets/icon-food.png" alt="What Should I Eat Today icon" data-i18n="alt.food" data-i18n-attr="alt"></div>
       </div>
     </section>
 
-    <section class="section section-muted" aria-label="品牌重點">
+    <section class="section section-muted" aria-label="Studio highlights" data-i18n="stats.label" data-i18n-attr="aria-label">
       <div class="stat-grid">
         <div class="stat-item">
           <strong>6</strong>
-          <span>款已上架 App</span>
+          <span data-i18n="stats.published">Published apps</span>
         </div>
         <div class="stat-item">
           <strong>1</strong>
-          <span>個開發中專案</span>
+          <span data-i18n="stats.developing">App in development</span>
         </div>
         <div class="stat-item">
           <strong>Android</strong>
-          <span>專注行動工具與輕遊戲</span>
+          <span data-i18n="stats.focus">Mobile tools and casual games</span>
         </div>
       </div>
     </section>
 
     <section class="section" id="apps" aria-labelledby="apps-title">
       <div class="section-heading">
-        <p class="eyebrow">Published Apps</p>
-        <h2 id="apps-title">已上架作品</h2>
-        <p>從小店營運、AI 提示詞、台灣天氣到郵務查詢，每一款 App 都以明確情境與實際使用需求為核心。</p>
+        <p class="eyebrow" data-i18n="apps.eyebrow">Published Apps</p>
+        <h2 id="apps-title" data-i18n="apps.title">Apps on Google Play</h2>
+        <p data-i18n="apps.intro">From running a small shop and getting more from AI to checking Taiwan's weather and postal information, each app is built around a real, clearly defined need.</p>
       </div>
 
       <div class="app-grid">
         <article class="app-card">
           <img src="developer-page-assets/icon-pos.png" alt="" width="72" height="72">
           <div>
-            <p class="app-status">已上架</p>
-            <h3>小店點餐系統</h3>
-            <p>平板 POS 整合點餐、結帳、庫存、會計與報表，操作直觀，3 天免費試用，月費 NT$99 起。</p>
-            <a href="https://play.google.com/store/apps/details?id=gundon.gu.posystem" target="_blank" rel="noopener">查看 Play 商店</a>
+            <p class="app-status" data-i18n="apps.publishedStatus">Available now</p>
+            <h3 data-i18n="apps.pos.title">Small Shop Ordering System</h3>
+            <p data-i18n="apps.pos.description">A tablet POS that brings ordering, checkout, inventory, accounting, and reporting together in one place. Includes a 3-day free trial, with plans starting at NT$99 per month.</p>
+            <a href="https://play.google.com/store/apps/details?id=gundon.gu.posystem" target="_blank" rel="noopener" data-i18n="apps.playStore">View on Google Play</a>
           </div>
         </article>
 
         <article class="app-card">
           <img src="developer-page-assets/icon-gpt.png" alt="" width="72" height="72">
           <div>
-            <p class="app-status">已上架</p>
-            <h3>Chatgpt秘笈(Prompt大全)-2026</h3>
-            <p>提示詞管理與 AI 對話效率工具，支援自訂 Prompt、本機聊天歷史與自備 OpenAI/Gemini API key。</p>
-            <a href="https://play.google.com/store/apps/details?id=com.forlearn.gpt" target="_blank" rel="noopener">查看 Play 商店</a>
+            <p class="app-status" data-i18n="apps.publishedStatus">Available now</p>
+            <h3 data-i18n="apps.gpt.title">ChatGPT Prompt Guide (Prompt Library) — 2026</h3>
+            <p data-i18n="apps.gpt.description">Save and organize prompts, keep chat history on your device, and connect your own OpenAI or Gemini API key for more efficient AI conversations.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.forlearn.gpt" target="_blank" rel="noopener" data-i18n="apps.playStore">View on Google Play</a>
           </div>
         </article>
 
         <article class="app-card">
           <img src="developer-page-assets/icon-weather.png" alt="" width="72" height="72">
           <div>
-            <p class="app-status">已上架</p>
-            <h3>台灣天氣預報</h3>
-            <p>整合即時天氣、36 小時預報、雷達回波、AQI 與紫外線，快速掌握出門前所需天氣資訊。</p>
-            <a href="https://play.google.com/store/apps/details?id=com.cwb.monitor" target="_blank" rel="noopener">查看 Play 商店</a>
+            <p class="app-status" data-i18n="apps.publishedStatus">Available now</p>
+            <h3 data-i18n="apps.weather.title">Taiwan Weather Forecast</h3>
+            <p data-i18n="apps.weather.description">Check current conditions, the next 36 hours, radar imagery, AQI, and UV levels—all in one place before you head out.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.cwb.monitor" target="_blank" rel="noopener" data-i18n="apps.playStore">View on Google Play</a>
           </div>
         </article>
 
         <article class="app-card">
           <img src="developer-page-assets/icon-postal.png" alt="" width="72" height="72">
           <div>
-            <p class="app-status">已上架</p>
-            <h3>台灣郵遞區號3+3查詢</h3>
-            <p>整合 3+3 郵遞區號、附近郵筒、郵局查詢、掛號包裹追蹤與信封產生器，寄件行政一站搞定。</p>
-            <a href="https://play.google.com/store/apps/details?id=taiwan.adresscode.monitor" target="_blank" rel="noopener">查看 Play 商店</a>
+            <p class="app-status" data-i18n="apps.publishedStatus">Available now</p>
+            <h3 data-i18n="apps.postal.title">Taiwan Postal Code 3+3 Lookup</h3>
+            <p data-i18n="apps.postal.description">Find Taiwan 3+3 postal codes, nearby mailboxes and post offices, track registered mail and parcels, and generate envelopes—all in one app.</p>
+            <a href="https://play.google.com/store/apps/details?id=taiwan.adresscode.monitor" target="_blank" rel="noopener" data-i18n="apps.playStore">View on Google Play</a>
           </div>
         </article>
 
         <article class="app-card">
           <img src="developer-page-assets/icon-stock.png" alt="" width="72" height="72">
           <div>
-            <p class="app-status">已上架</p>
-            <h3>股市模擬器</h3>
-            <p>單機投資模擬遊戲，管理 15 檔虛構股票與現金流，在新聞事件中判斷買賣、達成資產目標。</p>
-            <a href="https://play.google.com/store/apps/details?id=stock.investor.simulator" target="_blank" rel="noopener">查看 Play 商店</a>
+            <p class="app-status" data-i18n="apps.publishedStatus">Available now</p>
+            <h3 data-i18n="apps.stock.title">Stock Market Simulator</h3>
+            <p data-i18n="apps.stock.description">Trade 15 fictional stocks in an offline investment game. Follow the news, manage your cash flow, and work toward your target net worth.</p>
+            <a href="https://play.google.com/store/apps/details?id=stock.investor.simulator" target="_blank" rel="noopener" data-i18n="apps.playStore">View on Google Play</a>
           </div>
         </article>
 
         <article class="app-card">
           <img src="developer-page-assets/icon-food.png" alt="" width="72" height="72">
           <div>
-            <p class="app-status">已上架</p>
-            <h3>今天吃什麼</h3>
-            <p>溫暖可愛的美食決策小幫手，支援拉霸機抽籤、附近餐廳推薦、分類篩選與專屬菜單管理。</p>
-            <a href="https://play.google.com/store/apps/details?id=com.meowmeow.yumyum" target="_blank" rel="noopener">查看 Play 商店</a>
+            <p class="app-status" data-i18n="apps.publishedStatus">Available now</p>
+            <h3 data-i18n="apps.food.title">What Should I Eat Today?</h3>
+            <p data-i18n="apps.food.description">Can't decide what to eat? Spin the picker, discover nearby restaurants, filter by category, and keep your own menu list.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.meowmeow.yumyum" target="_blank" rel="noopener" data-i18n="apps.playStore">View on Google Play</a>
           </div>
         </article>
       </div>
@@ -150,16 +163,16 @@
 
     <section class="section section-contrast" id="developing" aria-labelledby="developing-title">
       <div class="section-heading">
-        <p class="eyebrow">In Development</p>
-        <h2 id="developing-title">開發中的新作品</h2>
-        <p>目前正在規劃下一個生活型工具專案，先以開發規劃與需求驗證為主。</p>
+        <p class="eyebrow" data-i18n="developing.eyebrow">In Development</p>
+        <h2 id="developing-title" data-i18n="developing.title">What We're Building Next</h2>
+        <p data-i18n="developing.intro">We're planning our next practical app and making sure it solves the right problems.</p>
       </div>
 
       <div class="feature-grid">
         <article class="feature-card">
           <img src="developer-page-assets/app-food.svg" alt="" width="84" height="84">
-          <h3>租屋生活助手</h3>
-          <p>解決租屋族日常大大小小瑣事太多難以一站管理的問題！</p>
+          <h3 data-i18n="developing.rental.title">Renter's Companion</h3>
+          <p data-i18n="developing.rental.description">A simpler way for renters to keep everyday tasks and details organized in one place.</p>
         </article>
       </div>
     </section>
@@ -167,22 +180,22 @@
     <section class="section" id="studio" aria-labelledby="studio-title">
       <div class="studio-layout">
         <div class="section-heading align-left">
-          <p class="eyebrow">Studio Notes</p>
-          <h2 id="studio-title">我們重視的事</h2>
-          <p>Natural Intelligence Studio 的產品從台灣使用情境出發，重視清楚、穩定、隱私與長期維護。</p>
+          <p class="eyebrow" data-i18n="studio.eyebrow">Studio Notes</p>
+          <h2 id="studio-title" data-i18n="studio.title">What Matters to Us</h2>
+          <p data-i18n="studio.intro">Our products start with real-life needs in Taiwan. We care about clear design, reliable performance, privacy, and support that lasts.</p>
         </div>
         <div class="principle-list">
           <div class="principle-item">
-            <h3>清楚可用</h3>
-            <p>介面與流程先服務實際任務，讓使用者能快速知道下一步。</p>
+            <h3 data-i18n="studio.clear.title">Clear and Practical</h3>
+            <p data-i18n="studio.clear.description">We design around the job at hand, so the next step always feels obvious.</p>
           </div>
           <div class="principle-item">
-            <h3>在地需求</h3>
-            <p>天氣、郵務、小店營運等功能，都以台灣使用者的日常情境為核心。</p>
+            <h3 data-i18n="studio.local.title">Built for Local Needs</h3>
+            <p data-i18n="studio.local.description">Weather, postal services, and small-shop tools are shaped around everyday life in Taiwan.</p>
           </div>
           <div class="principle-item">
-            <h3>持續更新</h3>
-            <p>每個 App 都會依使用回饋、資料維護與平台規範持續調整。</p>
+            <h3 data-i18n="studio.updates.title">Continuously Improved</h3>
+            <p data-i18n="studio.updates.description">We keep each app current as user needs, data, and platform requirements evolve.</p>
           </div>
         </div>
       </div>
@@ -191,22 +204,23 @@
     <section class="section section-muted" id="contact" aria-labelledby="contact-title">
       <div class="contact-panel">
         <div>
-          <p class="eyebrow">Links</p>
-          <h2 id="contact-title">官方連結</h2>
-          <p>目前作品可由 Google Play 開發者頁面查看。產品支援與聯絡方式請以各 App 商店頁面資訊為準。</p>
+          <p class="eyebrow" data-i18n="links.eyebrow">Links</p>
+          <h2 id="contact-title" data-i18n="links.title">Official Links</h2>
+          <p data-i18n="links.intro">Browse all of our apps on the Google Play developer page. For support and contact details, please check each app's store listing.</p>
         </div>
         <div class="link-list">
-          <a href="https://play.google.com/store/apps/developer?id=Natural+Intelligence+Studio" target="_blank" rel="noopener">Google Play 開發者頁面</a>
-          <a href="https://g07377.github.io/" target="_blank" rel="noopener">開發者網站</a>
+          <a href="https://play.google.com/store/apps/developer?id=Natural+Intelligence+Studio" target="_blank" rel="noopener" data-i18n="links.play">Google Play Developer Page</a>
+          <a href="https://g07377.github.io/" target="_blank" rel="noopener" data-i18n="links.website">Developer Website</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span data-year>2026</span> Natural Intelligence Studio. Android and Google Play are trademarks of Google LLC.</p>
+    <p>© <span data-year>2026</span> <span data-i18n="footer.trademark">Natural Intelligence Studio. Android and Google Play are trademarks of Google LLC.</span></p>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
