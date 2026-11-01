@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Daymotive foreground-service demonstration: a user-started workout, rest timer, ongoing notification, floating shortcut, and stopping the session.">
+  <title>Daymotive — Foreground Service Demonstration</title>
+  <style>
+    :root{color-scheme:light;--ink:#173b3a;--muted:#52686a;--teal:#006b60;--line:#d8e5e1;--bg:#f5f8f7}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--teal);text-underline-offset:3px;overflow-wrap:anywhere}a:focus-visible,button:focus-visible,video:focus-visible{outline:3px solid #d19a28;outline-offset:4px}header,main,footer{max-width:1120px;margin:auto;padding-left:28px;padding-right:28px}header{padding-top:36px;padding-bottom:28px;border-bottom:1px solid var(--line)}.brand{font-size:13px;font-weight:750;letter-spacing:.12em;color:var(--teal);margin:0 0 14px;text-transform:uppercase}h1{font-size:clamp(28px,4.3vw,44px);line-height:1.15;letter-spacing:-.025em;margin:0 0 18px}h2{font-size:21px;line-height:1.4;margin:0 0 12px}p{margin:10px 0}.intro{font-size:18px;max-width:780px}.meta{display:flex;flex-wrap:wrap;gap:7px 20px;margin-top:18px;color:var(--muted);font-size:14px}code{font-size:.95em;overflow-wrap:anywhere}main{display:grid;grid-template-columns:minmax(300px,420px) minmax(0,1fr);gap:38px;padding-top:30px;padding-bottom:36px}.player-panel{min-width:0}.video-frame{background:#122323;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px #193a3514}video{display:block;width:100%;height:auto;aspect-ratio:3/7;background:#000}.player-caption{font-size:14px;color:var(--muted);margin:14px 0}.download{display:inline-block;font-weight:650}.content{min-width:0}.note{padding:18px 20px;background:#edf4f1;border:1px solid #d1e2da;border-radius:10px;font-size:14px}.section{margin-top:28px}.chapters{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.chapters li{padding:15px 0;border-bottom:1px solid var(--line)}.chapters button{border:0;background:none;padding:2px 0;font:inherit;font-weight:750;color:var(--teal);cursor:pointer;text-align:left;text-decoration:underline;text-underline-offset:3px}.chapters p{margin:5px 0 0;font-size:15px}.quiet{color:var(--muted);font-size:14px}footer{border-top:1px solid var(--line);padding-top:20px;padding-bottom:34px;color:var(--muted);font-size:13px}.skip{position:absolute;top:-100px;left:20px;background:white;padding:10px}.skip:focus{top:10px}.status{min-height:24px;font-size:14px;color:var(--muted);margin-top:12px}
+    @media(max-width:760px){header,main,footer{padding-left:20px;padding-right:20px}header{padding-top:26px}main{grid-template-columns:1fr;gap:28px;padding-top:24px}.player-panel{max-width:420px;margin:auto;width:100%}.intro{font-size:17px}.meta{display:block}.meta span{display:block;margin-top:5px}.note{padding:16px}.section{margin-top:24px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#demo">Skip to the demonstration</a>
+  <header>
+    <p class="brand">Natural Intelligence Studio · Daymotive / 練日常</p>
+    <h1>Foreground service<br>demonstration</h1>
+    <p class="intro">A user-started workout with a rest timer, an ongoing status notification and an optional floating shortcut — followed by an explicit stop.</p>
+    <div class="meta"><span>Android package: <code>life.muscle.beach</code></span><span>2 min 10 sec · Silent · English interface</span></div>
+  </header>
+  <main id="demo">
+    <section class="player-panel" aria-label="Demonstration video">
+      <div class="video-frame">
+        <video id="demo-video" controls playsinline preload="metadata" aria-label="Daymotive foreground-service demonstration">
+          <source src="Daymotive-FGS-demo-compact.mp4" type="video/mp4">
+          Your browser does not support embedded video. <a href="Daymotive-FGS-demo-compact.mp4">Open the MP4 directly</a>.
+        </video>
+      </div>
+      <p class="player-caption">Real screen recording with synthetic demonstration data. Silent video; explanatory captions are visible within the recording. Playback does not start automatically.</p>
+      <a class="download" href="Daymotive-FGS-demo-compact.mp4">Open / download the MP4 directly</a>
+      <p class="quiet">7.6 MB · 720 × 1680 · 15 fps · H.264 MP4</p>
+      <p class="status" id="player-status" role="status" aria-live="polite"></p>
+    </section>
+    <div class="content">
+      <section class="note" aria-labelledby="build-title">
+        <h2 id="build-title">Recording and build details</h2>
+        <p><strong>Recorded demo build:</strong> debug version 1.6, version code 7.</p>
+        <p><strong>Planned release:</strong> version 1.0.6, version code 7. This recording is not a verification of the final release build or Android App Bundle (AAB).</p>
+        <p>The recording is edited, with waits trimmed. The explicit stop sequence from 01:31 onward was recorded separately and appended. This page hosts the approved video unchanged.</p>
+      </section>
+      <section class="section" aria-labelledby="timeline-title">
+        <h2 id="timeline-title">What the video shows</h2>
+        <p class="quiet">Select a timestamp to seek. Use the video controls to play, pause or enter full screen.</p>
+        <ol class="chapters">
+          <li><button type="button" data-time="0">00:00–00:08 · App and settings</button><p>Daymotive branding and the relevant settings are shown.</p></li>
+          <li><button type="button" data-time="8">00:08–00:21 · User starts the flow</button><p>Resume a saved workout, complete a set and start the rest countdown.</p></li>
+          <li><button type="button" data-time="21">00:21–00:38 · Continue outside the app</button><p>Move the app to the background, view the floating shortcut and ongoing status notification, then return to the workout.</p></li>
+          <li><button type="button" data-time="38">00:38–01:04 · User-controlled rest</button><p>Pause, resume and extend the rest timer.</p></li>
+          <li><button type="button" data-time="64">01:04–01:31 · Rest completes</button><p>The background countdown reaches its end and the visible rest-completion state appears. The recording has no audio.</p></li>
+          <li><button type="button" data-time="91">01:31–02:10 · Explicitly stop</button><p>In a separately recorded sequence, select “Save &amp; leave.” The final notification-shade view shows that the Daymotive status notification has been removed.</p></li>
+        </ol>
+      </section>
+      <section class="section" aria-labelledby="context-title">
+        <h2 id="context-title">Service context</h2>
+        <p>The demonstration concerns <code>FOREGROUND_SERVICE_SPECIAL_USE</code> for a workout initiated by the user with training notifications enabled. The ongoing notification and optional floating shortcut provide access to the current workout while another app is in use.</p>
+        <p class="quiet">This is supporting demonstration material, not evidence of Google Play approval. It does not demonstrate an audible alert or validate behavior on every device.</p>
+      </section>
+    </div>
+  </main>
+  <footer><p>This page and video are publicly accessible without sign-in. A request not to index this page is not access protection; the links can be shared.</p><p>© 2026 Natural Intelligence Studio · <a href="../../privacy/personal-muscle/">Daymotive privacy policy</a></p></footer>
+  <script>
+    const video = document.getElementById('demo-video');
+    const status = document.getElementById('player-status');
+    document.querySelectorAll('[data-time]').forEach(button => {
+      button.addEventListener('click', () => {
+        const seconds = Number(button.dataset.time);
+        video.currentTime = seconds;
+        status.textContent = 'Selected ' + button.textContent.split(' · ')[0] + '. Use the video controls to play.';
+        video.focus({preventScroll:true});
+      });
+    });
+    video.addEventListener('error', () => {
+      status.textContent = 'The embedded video could not load. Please use the direct MP4 link above.';
+    });
+  </script>
+</body>
+</html>
