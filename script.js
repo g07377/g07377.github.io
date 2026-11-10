@@ -124,12 +124,17 @@ const applyLocale = (requestedLocale) => {
 
 const languageSelect = document.querySelector('[data-language-select]');
 const storedLanguage = getStoredLanguage();
+// Keep the current choice even if the browser blocks localStorage writes.
+let selectedMode = storedLanguage || 'auto';
 applyLocale(storedLanguage || detectDeviceLocale());
 
 if (languageSelect) {
+  const languageControl = document.querySelector('.language-control');
+  if (languageControl) languageControl.hidden = false;
   languageSelect.value = storedLanguage || 'auto';
   languageSelect.addEventListener('change', () => {
     const selectedLanguage = languageSelect.value;
+    selectedMode = selectedLanguage;
 
     if (selectedLanguage === 'auto') {
       storeLanguage(null);
@@ -143,7 +148,7 @@ if (languageSelect) {
 }
 
 window.addEventListener('languagechange', () => {
-  if (!getStoredLanguage()) {
+  if (selectedMode === 'auto') {
     applyLocale(detectDeviceLocale());
   }
 });
@@ -167,9 +172,21 @@ const setActiveLink = () => {
   });
 
   navLinks.forEach((link) => {
-    link.classList.toggle('is-active', current && link.getAttribute('href') === `#${current.id}`);
+    const active = Boolean(current && link.getAttribute('href') === `#${current.id}`);
+    link.classList.toggle('is-active', active);
+    if (active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
   });
 };
 
 setActiveLink();
-window.addEventListener('scroll', setActiveLink, { passive: true });
+let scrollPending = false;
+window.addEventListener('scroll', () => {
+  if (scrollPending) return;
+  scrollPending = true;
+  window.requestAnimationFrame(() => {
+    setActiveLink();
+    scrollPending = false;
+  });
+}, { passive: true });
+window.addEventListener('resize', setActiveLink);
